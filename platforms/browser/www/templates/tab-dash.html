@@ -1,20 +1,17 @@
-<ion-view id="page3" style="background-color:#ECECEC;" >
-   <ion-nav-title >
-        <h1 class="title">Dicas</h1>
-   </ion-nav-title>
-  <ion-content padding="true" class="has-header" has-bouncing="true">
-     <div class="list card" id="dicas-card" menu-close ng-repeat="dica in dicas track by dica.id" ui-sref="tabsController.detalhe({dica: dica.id})" ng-style="{background: colorCodeArray[$index % colorCodeArray.length]}">
-        <div class="item-card item-image" id="dicas-list-item-container" >
-            <div id="dicas-item" class="show-list-numbers-and-dots" >
-              <p id="nomeDica" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto; " ng-bind="::dica.descricao"> </p>
-            </div>
-        </div>
-        <div class="item item-body" id="dicas-list-item-container9">
-            <div id="dicas-markdown10" class="show-list-numbers-and-dots">
-              <p style="margin-top:0px;color:#000000;">veja mais +</p>
-            </div>
-        </div>
-     </div>
-
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>Welcome to Ionic</h2>
+    <p>
+    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
+    </p>
+    <p>
+      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
+    </p>
+    <p>
+    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
+    </p>
+    <p>
+      <b>Psst!</b> - Try <a href="http://view.ionic.io/">Ionic View</a> to easily share and test your app with clients and co-workers.
+    </p>
   </ion-content>
 </ion-view>
