@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
 function ($scope, $stateParams, TransitoSeguroService, $ionicLoading) {
  $ionicLoading.show();
 TransitoSeguroService.obterDicas($stateParams.categoria).then(function(dados){
-
+  console.log(dados);
     $scope.dicas = dados; 
      $ionicLoading.hide();
   })
