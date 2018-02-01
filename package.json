@@ -2,13 +2,18 @@
   "name": "sample-pwa",
   "version": "1.1.1",
   "description": "sample-pwa: An Ionic project",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect": "^3.5.0",
+    "serve-static": "^1.11.1"
+  },
   "devDependencies": {
     "gulp": "^3.5.6",
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0",
-    "connect": "^3.5.0",
-    "serve-static": "^1.11.1"
+    "gulp-sass": "^3.1.0"
   },
   "cordovaPlugins": [
     "cordova-plugin-statusbar",
@@ -18,6 +23,5 @@
     "cordova-plugin-device",
     "ionic-plugin-keyboard"
   ],
-  "cordovaPlatforms": [],
-  "start": "node server.js"
+  "cordovaPlatforms": []
 }
