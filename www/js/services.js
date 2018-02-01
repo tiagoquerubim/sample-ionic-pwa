@@ -47,4 +47,34 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+
+.service('TransitoSeguroService',function($http){
+
+  var url = 'https://transitoseguro.herokuapp.com/rest/';
+
+  return {
+    obterDicas: function(categoria){
+      return $http.get(url+'dicas/'+categoria).then(function(response){
+        return response.data;
+      });
+    },
+
+    obterDetalhes: function(dica){
+      return $http.get(url+'detalhes/'+dica).then(function(response){
+        return response.data;
+      });
+    },
+
+    obterParceiros: function(){
+      return $http.get(url+'parceiros').then(function(response){
+        return response.data;
+      });
+    }
+  }
+
+  
+    
+  
 });

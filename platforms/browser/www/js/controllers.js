@@ -25,4 +25,29 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+
+.controller('dicasCtrl', ['$scope', '$stateParams','TransitoSeguroService',  '$ionicLoading',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+// You can include any angular dependencies as parameters for this function
+// TIP: Access Route Parameters for your page via $stateParams.parameterName
+function ($scope, $stateParams, TransitoSeguroService, $ionicLoading) {
+ $ionicLoading.show();
+TransitoSeguroService.obterDicas($stateParams.categoria).then(function(dados){
+
+    $scope.dicas = dados; 
+     $ionicLoading.hide();
+  })
+  
+  $scope.colorCodeArray = [
+         "#77BBFF",
+         "#8CC63F",
+         "#B292C4",
+         "#F0C508",
+         "#F7941E",      
+         "#2BB673",       
+         "#EF3E36",
+         "#743F98",
+         "#13A89E",
+    ];
+    
+}]);
