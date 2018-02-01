@@ -32,7 +32,7 @@ angular.module('starter.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, TransitoSeguroService, $ionicLoading) {
  $ionicLoading.show();
-TransitoSeguroService.obterDicas(1).then(function(dados){
+TransitoSeguroService.obterDicas("1").then(function(dados){
   console.log(dados);
     $scope.dicas = dados; 
      $ionicLoading.hide();

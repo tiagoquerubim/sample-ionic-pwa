@@ -56,6 +56,8 @@ angular.module('starter.services', [])
 
   return {
     obterDicas: function(categoria){
+
+      console.log(categoria);
       return $http.get(url+'dicas/'+categoria).then(function(response){
         return response.data;
       });
