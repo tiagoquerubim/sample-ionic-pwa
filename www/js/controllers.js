@@ -1,6 +1,5 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -27,7 +26,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('dicasCtrl', ['$scope', '$stateParams','TransitoSeguroService',  '$ionicLoading',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('DashCtrl', ['$scope', '$stateParams','TransitoSeguroService',  '$ionicLoading',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, TransitoSeguroService, $ionicLoading) {
